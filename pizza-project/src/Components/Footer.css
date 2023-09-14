@@ -1,0 +1,29 @@
+:root {
+  --yellow-color: #fdc913;
+  --light-color: #5f5f5f;
+  --dark-color: #292929;
+  --red-color: #ce2829;
+  --beige-color: #faf7f2;
+
+  --barlow-font: "Barlow", sans-serif;
+  --quattrocento-font: "Quattrocento", serif;
+  --satisfy-font: "Satisfy", cursive;
+}
+footer {
+  background: var(--dark-color);
+}
+.footer-div {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+}
+.instagram {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+footer p {
+  color: white;
+  text-align: left;
+}

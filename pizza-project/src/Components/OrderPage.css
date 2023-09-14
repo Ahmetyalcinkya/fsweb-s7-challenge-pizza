@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Quattrocento&family=Satisfy&display=swap");
+:root {
+  --yellow-color: #fdc913;
+  --light-color: #5f5f5f;
+  --dark-color: #292929;
+  --red-color: #ce2829;
+  --beige-color: #faf7f2;
+
+  --barlow-font: "Barlow", sans-serif;
+  --quattrocento-font: "Quattrocento", serif;
+  --satisfy-font: "Satisfy", cursive;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+}
+.checkbox-group {
+  display: grid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  grid-template-columns: repeat(3, 5fr);
+  grid-column-gap: 5rem;
+  grid-row-gap: 1rem;
+  text-align: left;
+  margin: 0 auto;
+}
+.personal-group {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem;
+}
