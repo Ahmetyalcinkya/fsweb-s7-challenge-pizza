@@ -344,6 +344,7 @@ export default function OrderPage(props) {
                   borderRadius: ".25rem",
                 }}
                 onClick={() => submitHandler()}
+                data-cy="submit-button"
               >
                 SİPARİŞ VER
               </button>

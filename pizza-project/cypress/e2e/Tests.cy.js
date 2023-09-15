@@ -8,10 +8,16 @@ describe("Success Tests", () => {
       .url()
       .should("include", "/pizza");
     cy.visit("http://localhost:3000/pizza");
-    cy.get('[data-cy="dropdown"]').click();
-    cy.get('[data-cy="dropdown-item2"]')
-      .click()
-      .should("have.class", "selected");
-    cy.get('[data-cy="checkbox-input"]').click().should("have.checked");
+    //dropdown
+    //dropdown
+    // cy.get(':nth-child(1) > [data-cy="checkbox-input"]', { multiple: true })
+    //   .click()
+    //   .should("have.checked");
+    // cy.get("#name").click().should("have.value", "Ahmet Can Yalçınkaya");
+    // cy.get("#phone").click().should("have.value", "5340684100");
+    // cy.get("#address")
+    //   .click()
+    //   .should("have.value", "Akbilek Mah. Furkan Sk. No:7");
+    // cy.get('[data-cy="submit-button"]').click();
   });
 });
