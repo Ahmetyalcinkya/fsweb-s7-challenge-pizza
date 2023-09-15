@@ -9,6 +9,7 @@ describe("Success Tests", () => {
       .should("include", "/pizza");
     cy.visit("http://localhost:3000/pizza");
     //dropdown
+    // cy.get("select#size").select("Medium")
     //dropdown
     // cy.get(':nth-child(1) > [data-cy="checkbox-input"]', { multiple: true })
     //   .click()

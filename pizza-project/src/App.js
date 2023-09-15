@@ -106,41 +106,40 @@ function App() {
   };
 
   const submitHandler = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     axios.post("https://reqres.in/api/users", formData).then((res) => {
-      console.log(formData);
-      history.push("/success", { state: { formData } });
+      history.push("/success", formData);
       setFormData(formDataInitial);
     });
-    const {
-      pizzaName,
-      size,
-      dough,
-      toppings,
-      note,
-      count,
-      price,
-      name,
-      phone,
-      address,
-    } = formData;
-    const targetPath = `/success`;
-    const dataToSend = {
-      pizzaName,
-      size,
-      dough,
-      toppings,
-      note,
-      count,
-      price,
-      name,
-      phone,
-      address,
-    };
-    history.push({
-      pathname: targetPath,
-      state: dataToSend,
-    });
+    // const {
+    //   pizzaName,
+    //   size,
+    //   dough,
+    //   toppings,
+    //   note,
+    //   count,
+    //   price,
+    //   name,
+    //   phone,
+    //   address,
+    // } = formData;
+    // const targetPath = `/success`;
+    // const dataToSend = {
+    //   pizzaName,
+    //   size,
+    //   dough,
+    //   toppings,
+    //   note,
+    //   count,
+    //   price,
+    //   name,
+    //   phone,
+    //   address,
+    // };
+    // history.push({
+    //   pathname: targetPath,
+    //   state: dataToSend,
+    // });
   };
 
   useEffect(() => {

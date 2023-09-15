@@ -6,6 +6,7 @@ import "./Success.css";
 export default function Success() {
   const location = useLocation();
   const dataReceived = location.state;
+  console.log(dataReceived);
   // if (!dataReceived) {
   //   return <div>Veri bulunamadı.</div>;
   // }
@@ -35,8 +36,7 @@ export default function Success() {
             <div id="pizza-infos">
               <p>Pizza Boyutu: {dataReceived.size}</p>
               <p>Hamur Kalınlığı: {dataReceived.dough}</p>
-              <p>Ek Malzemeler: {dataReceived.toppingList}</p>
-              {/* <p>Ek Malzemeler: {dataReceived.toppings.join(", ")}</p> */}
+              <p>Ek Malzemeler: {dataReceived.toppingList.join(", ")}</p>
               <p>Toplam Fiyat: {dataReceived.price} ₺</p>
             </div>
             <div>

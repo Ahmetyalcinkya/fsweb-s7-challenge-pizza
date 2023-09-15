@@ -150,7 +150,7 @@ export default function OrderPage(props) {
               <label key={topping.value} style={{ display: "flex" }}>
                 <input
                   type="checkbox"
-                  checked={formData.toppingList.indexOf(topping) !== -1}
+                  checked={formData.toppingList.indexOf(topping.value) !== -1}
                   onChange={checkChangeHandler}
                   name={topping.value}
                   data-cy="checkbox-input"
@@ -331,7 +331,7 @@ export default function OrderPage(props) {
             <div className="order-button" style={{ width: "100%" }}>
               <button
                 type="submit"
-                // disabled={!isValid}
+                disabled={!isValid}
                 style={{
                   width: "100%",
                   marginTop: "2rem",
@@ -343,7 +343,6 @@ export default function OrderPage(props) {
                   cursor: "pointer",
                   borderRadius: ".25rem",
                 }}
-                onClick={() => submitHandler()}
                 data-cy="submit-button"
               >
                 SİPARİŞ VER
