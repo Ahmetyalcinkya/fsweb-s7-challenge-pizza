@@ -15,7 +15,7 @@ function App() {
     pizzaName: dummyData[1].name,
     size: "",
     dough: "",
-    toppings: [],
+    toppingList: [],
     name: "",
     phone: "",
     address: "",
@@ -27,7 +27,7 @@ function App() {
     pizzaName: dummyData[1].name,
     size: "",
     dough: "",
-    toppings: [],
+    toppingList: "",
     name: "",
     phone: "",
     address: "",
@@ -42,7 +42,7 @@ function App() {
   const totalPrice = () => {
     let price = dummyData[1].price;
 
-    price += formData.toppings.length * 5;
+    price += formData.toppingList.length * 5;
 
     price *= formData.count;
 
@@ -60,7 +60,7 @@ function App() {
     phone: Yup.string()
       .required("Bu alanın doldurulması zorunludur.")
       .min(10, "Geçerli bir telefon numarası giriniz."),
-    toppings: Yup.array()
+    toppingList: Yup.array()
       .min(2, "En az 2 ek malzeme seçmelisiniz.")
       .max(5, "En fazla 5 ek malzeme seçebilirsiniz."),
     address: Yup.string()
@@ -85,6 +85,24 @@ function App() {
       .catch((err) => {
         setFormErr({ ...formErr, [name]: err.errors[0] });
       });
+  };
+  const checkChangeHandler = (e) => {
+    const { name, checked } = e.target;
+    if (checked) {
+      if (formData.toppingList.length === 10) {
+        alert("En fazla 10 adet ek malzeme seçebilirsiniz.");
+      } else {
+        setFormData({
+          ...formData,
+          toppingList: [...formData.toppingList, name],
+        });
+      }
+    } else {
+      setFormData({
+        ...formData,
+        toppingList: [...formData.toppingList.filter((t) => t !== name)],
+      });
+    }
   };
 
   const submitHandler = (e) => {
@@ -145,6 +163,7 @@ function App() {
             changeHandler={changeHandler}
             submitHandler={submitHandler}
             totalPrice={totalPrice}
+            checkChangeHandler={checkChangeHandler}
           />
         </Route>
         <Route path="/success" exact>

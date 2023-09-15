@@ -14,7 +14,13 @@ export default function PizzaCard(props) {
       }}
     >
       <img src={dummyData.imgUrl} alt="" />
-      <h4 style={{ textAlign: "left" }}>{dummyData.name}</h4>
+      <h4
+        style={{
+          textAlign: "left",
+        }}
+      >
+        {dummyData.name}
+      </h4>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <p>{dummyData.price}</p>
         <p>{dummyData.point}</p>

@@ -14,6 +14,7 @@ export default function OrderPage(props) {
     isValid,
     formErr,
     totalPrice,
+    checkChangeHandler,
   } = props;
 
   const toppingsList = [
@@ -149,10 +150,9 @@ export default function OrderPage(props) {
               <label key={topping.value} style={{ display: "flex" }}>
                 <input
                   type="checkbox"
-                  value={topping.value}
-                  checked={formData.toppings.includes(topping.value)}
-                  onChange={changeHandler}
-                  name="toppings"
+                  checked={formData.toppingList.indexOf(topping) !== -1}
+                  onChange={checkChangeHandler}
+                  name={topping.value}
                   data-cy="checkbox-input"
                   style={{
                     width: "2rem",
@@ -168,6 +168,7 @@ export default function OrderPage(props) {
           {formErr.topping && (
             <div className="error-message">{formErr.topping}</div>
           )}
+          {console.log(formData)}
         </div>
         <div className="form-group">
           <label

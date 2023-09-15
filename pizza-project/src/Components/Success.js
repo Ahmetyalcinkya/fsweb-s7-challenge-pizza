@@ -30,11 +30,12 @@ export default function Success() {
           }}
         />
         <div id="succes-page-content-container-two">
-          <p id="product-name">{dataReceived.pizzaName}aaaaaa</p>
+          <p id="product-name">{dataReceived.pizzaName}</p>
           <div id="success-page-details">
             <div id="pizza-infos">
               <p>Pizza Boyutu: {dataReceived.size}</p>
               <p>Hamur Kalınlığı: {dataReceived.dough}</p>
+              <p>Ek Malzemeler: {dataReceived.toppingList}</p>
               {/* <p>Ek Malzemeler: {dataReceived.toppings.join(", ")}</p> */}
               <p>Toplam Fiyat: {dataReceived.price} ₺</p>
             </div>

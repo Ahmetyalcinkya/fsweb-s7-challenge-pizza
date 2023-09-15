@@ -23,7 +23,15 @@ export default function HomePage() {
       <header className="photo-container">
         <div className="banner-text">
           <img src={Banner} className="tek-food" alt="title" />
-          <h4>fırsatı kaçırma</h4>
+          <h4
+            style={{
+              display: "flex",
+              margin: "0 auto",
+              justifyContent: "center",
+            }}
+          >
+            fırsatı kaçırma
+          </h4>
           <h1>KOD ACIKTIRIR</h1>
           <h1>PİZZA DOYURUR</h1>
           <Link
@@ -91,9 +99,11 @@ export default function HomePage() {
         <div className="order-div" id="order-div">
           <div className="order-div1">
             <div className="order-div1-text">
-              <h1>Özel Lezzetus</h1>
-              <h4>Position Absolute Acı Burger</h4>
-              <button className="order-btn">
+              <h1 id="div-h1">
+                Özel <br /> Lezzetus
+              </h1>
+              <h4 id="div-h4">Position Absolute Acı Burger</h4>
+              <button className="order-btn" id="order-btn1">
                 <a href="#menus">SİPARİŞ VER</a>
               </button>
             </div>
@@ -105,7 +115,7 @@ export default function HomePage() {
               <div className="order-div2-text">
                 <h2>Hackathlon </h2>
                 <h2>Burger Menü</h2>
-                <button className="order-btn">
+                <button className="order-btn" id="order-btn2">
                   <a href="#menus">SİPARİŞ VER</a>
                 </button>
               </div>
@@ -117,7 +127,7 @@ export default function HomePage() {
                   <span className="order-div2-2-span">Çoooook</span> hızlı
                 </h2>
                 <h2>npm gibi kurye</h2>
-                <button className="order-btn">
+                <button className="order-btn" id="order-btn3">
                   <a href="#menus">SİPARİŞ VER</a>
                 </button>
               </div>
